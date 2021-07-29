@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+	<head>
+		<title>A CycleGAN for style transfer between Drum & Bass subgenres</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<header><h1 class="display-3">Drum & Bass CycleGAN: examples</h1></header>
+
+			<p><a href="https://drive.google.com/open?id=13_oIgXJ52s1xMomRfbMcAHLRwYNMRFi1">Link to the paper.</a></p>
+			<p><a href="https://sites.google.com/view/ml4md2019/program?authuser=0">Link to the ML4MD @ ICML2019 programme.</a></p>
+
+
+			<h2>What's this?</h2>
+
+			<p>This web page illustrates the results of applying the <i>CycleGAN</i> technique to transform musical extracts between two genres of drum and bass music. Essentially, this <b>generates a very rudimentary "remix" of a song from one genre into the other</b>. For this, it only needs access to the raw audio -- no DAW or anything like that is involved in this process!</p>
+
+			<div class="row">
+				<div class="col-sm">
+					<p>The column <b>on the left</b> shows short extracts of original drum and bass songs. Each audio extract is also represented visually using a so-called <i>spectrogram</i>, which illustrates the spectral energy as a function of the frequency (vertically; bass frequencies at the bottom, high frequencies at the top of the image) and time (horizontally, left to right).</p>
+				</div>
+				<div class="col-sm">
+					<p>The column <b>on the right</b> shows the result of transforming the music from the left column into the other genre: liquid drum and bass extracts are transformed into dancefloor and vice versa.<br/>
+
+					When transforming from <b>liquid to dancefloor</b>, the model learned to add more noise in the high frequency regions, creating an "open hi-hat" sound. It also makes the snare drums more pronounced, giving them a more "punchy" sound.<br/>
+
+					When transforming from <b>dancefloor to liquid</b>, the model learned to remove noise in the high frequencies, giving the hi-hats a "closed" sound, and to make the snare drum sound "shorter" and "brighter".<br/>
+
+					Note that these transformations were <i>learned</i> by the model automatically.</p>
+				</div>
+			</div>
+
+
+
+
+			<h2 >Example from the paper</h2>
+
+			<span class="lead">Song: Technimatic - The Nightfall</span>
+			<div class="row">
+				<div class="col-sm">
+					<span class="fig-title">Original (liquid)</span>
+					<img src="technimatic-the-nightfall-orig.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="technimatic-the-nightfall-orig.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+
+				<div class="col-sm">
+					<span class="fig-title">Transfered (dancefloor)</span>
+					<img src="technimatic-the-nightfall-transfered.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="technimatic-the-nightfall-transfered.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+			</div>
+
+			<h2 >More examples</h2>
+
+			<span class="lead">Song: Hybrid Minds - Meant To Be</span>
+			<div class="row">
+				<div class="col-sm">
+					<span class="fig-title">Original (liquid)</span>
+					<img src="hybrid-minds-original.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="hybrid-minds-orig.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+
+				<div class="col-sm">
+					<span class="fig-title">Transfered (dancefloor)</span>
+					<img src="hybrid-minds-transfered.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="hybrid-minds-transfered.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+			</div>
+
+			<span class="lead">Song: Brookes Brothers - Loveline (Ft. Haz-Mat)</span>
+			<div class="row">
+				<div class="col-sm">
+					<span class="fig-title">Original (dancefloor)</span>
+					<img src="loveline-original.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="loveline-original.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+
+				<div class="col-sm">
+					<span class="fig-title">Transfered (liquid)</span>
+					<img src="loveline-transfered.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="loveline-transfered.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+			</div>
+
+			<span class="lead">Song: Polygon - Moment In Time</span>
+			<div class="row">
+				<div class="col-sm">
+					<span class="fig-title">Original (dancefloor)</span>
+					<img src="polygon-original.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="polygon-original.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+
+				<div class="col-sm">
+					<span class="fig-title">Transfered (liquid)</span>
+					<img src="polygon-transfered.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="polygon-transfered.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+			</div>
+
+			<h2>Examples in other genres</h2>
+
+			<p>The examples below show the result of applying the trained model to other music genres. Note that the model is trained on drum and bass music only, yet that the application to these other genres still applies the same transformations on the snare drums and hi-hats.</p>
+
+			<span class="lead">Song: Reinier Zonneveld - Things We Might Have Said</span>
+			<div class="row">
+				<div class="col-sm">
+					<span class="fig-title">Original (techno)</span>
+					<img src="other/things-we-might-have-said-orig.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="other/things-we-might-have-said-orig.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+
+				<div class="col-sm">
+					<span class="fig-title">Transfered ("dancefloor")</span>
+					<img src="other/things-we-might-have-said-dancefloor.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="other/things-we-might-have-said-dancefloor.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+			</div>
+
+			<span class="lead">Song: Rudimental - Not Giving In (Phaeleh Remix)</span>
+			<div class="row">
+				<div class="col-sm">
+					<span class="fig-title">Original (liquid dubstep)</span>
+					<img src="other/not-giving-in-orig.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="other/not-giving-in-orig.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+
+				<div class="col-sm">
+					<span class="fig-title">Transfered ("dancefloor")</span>
+					<img src="other/not-giving-in-dancefloor.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="other/not-giving-in-dancefloor.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+			</div>
+
+			<span class="lead">Song: Dave Brubeck - Take Five</span>
+			<div class="row">
+				<div class="col-sm">
+					<span class="fig-title">Original (jazz)</span>
+					<img src="other/take-five-orig.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="other/take-five-orig.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+
+				<div class="col-sm">
+					<span class="fig-title">Transfered ("liquid")</span>
+					<img src="other/take-five-liquid.png" class="img-fluid rounded music-snip-element">
+					<audio controls class="audio-ctrl">
+						<source src="other/take-five-liquid.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+			</div>
+
+
+			<h2>Phase reconstruction: original phase vs. Griffin-Lim</h2>
+
+			<p>The model operates on <i>amplitude</i> spectrograms, and in order to restore the audio, the spectral phase needs to be estimated. A common approach is to use phase reconstruction algorithms such as the Griffin-Lim algorithm [1], but these were found to yield qualitatively unsatisfying results. As a solution, the generated amplitude spectrogram is combined with the spectral phase of the <i>original</i> audio recording, which yields results of a better quality.</p>
+
+			<div class="row">
+				<div class="col-sm">
+					<span class="fig-title">With original phase</span>
+
+					<p>Original:</p>
+					<audio controls class="audio-ctrl">
+						<source src="technimatic-the-nightfall-orig.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+
+					<p>Transfered to dancefloor:</p>
+					<audio controls class="audio-ctrl">
+						<source src="technimatic-the-nightfall-transfered.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+				</div>
+
+				<div class="col-sm">
+					<span class="fig-title">With Griffin-Lim<sup>[1]</sup></span>
+
+					<p>Original:</p>
+					<audio controls class="audio-ctrl">
+						<source src="phase/technimatic-the-nightfall-orig.gl.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+
+					<p>Transfered to dancefloor:</p>
+					<audio controls class="audio-ctrl">
+						<source src="phase/technimatic-the-nightfall-transfered.gl.mp3" type="audio/mp3">
+						Your browser does not support the audio element.
+					</audio> 
+
+					<p>These examples are generated by applying the Griffin-Lim phase reconstruction algorithm to resp. the original (CycleGAN input) amplitude spectrogram and the generated (CycleGAN output) amplitude spectrogram.</p>
+
+					<p><small>[1] Griffin, D., & Lim, J. (1984). Signal estimation from modified short-time Fourier transform. IEEE Transactions on Acoustics, Speech, and Signal Processing, 32(2), 236-243.</small></p>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,13 @@
+.music-snip-element {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+}
+
+.audio-ctrl {
+	width: 100%;
+}
+
+.fig-title{
+	font-weight:bold;
+}

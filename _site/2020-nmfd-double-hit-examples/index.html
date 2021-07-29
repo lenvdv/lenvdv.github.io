@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Removing double hits in NMFD templates for automated drum mixture decomposition: examples</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<header><h1 class="display-4">Removing double hits in NMFD: examples</h1></header>
+
+			<p><a href="https://f5f218df-5007-42f6-905b-7f72220c6756.filesusr.com/ugd/23ae7b_dc0fe6ba05a14250bc3a6f148058a09e.pdf#page=12">Link to the paper/the MML @ ECML-PKDD 2020 workshop proceedings.</a></p>
+
+
+			<h2>What's this?</h2>
+
+			<p>This web page shows some side-by-side comparisons of drum mixture decompositions using the non-negative matrix factorization algorithm.</p>
+
+			<p>The first image for each example shows the decomposition by the original NMFD algorithm. Notice that several templates capture multiple drum hits, which is undesired.</p>
+				
+			<p>The second image shows the results using the adapted version from the paper, which is designed to avoid `double hits' occuring within a template. We observe that this adaptation is indeed successful.</p>
+			
+			<span class="lead">File: 071_phrase_shuffle-blues_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/071_phrase_shuffle-blues_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/071_phrase_shuffle-blues_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 087_phrase_shuffle-blues_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/087_phrase_shuffle-blues_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/087_phrase_shuffle-blues_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 038_phrase_disco_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/038_phrase_disco_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/038_phrase_disco_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 068_phrase_shuffle-blues_simple_fast_brushes</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/068_phrase_shuffle-blues_simple_fast_brushes.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/068_phrase_shuffle-blues_simple_fast_brushes.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 057_phrase_disco_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/057_phrase_disco_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/057_phrase_disco_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 044_phrase_rock_simple_fast_rods</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/044_phrase_rock_simple_fast_rods.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/044_phrase_rock_simple_fast_rods.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 040_phrase_disco_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/040_phrase_disco_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/040_phrase_disco_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 086_phrase_waltz_simple_fast_brushes</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/086_phrase_waltz_simple_fast_brushes.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/086_phrase_waltz_simple_fast_brushes.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 050_phrase_afro_simple_fast_mallets</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/050_phrase_afro_simple_fast_mallets.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/050_phrase_afro_simple_fast_mallets.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 062_phrase_salsa_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/062_phrase_salsa_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/062_phrase_salsa_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 101_phrase_country_simple_fast_brushes</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/101_phrase_country_simple_fast_brushes.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/101_phrase_country_simple_fast_brushes.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 095_phrase_funk_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/095_phrase_funk_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/095_phrase_funk_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 080_phrase_reggae_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/080_phrase_reggae_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/080_phrase_reggae_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 093_phrase_reggae_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/093_phrase_reggae_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/093_phrase_reggae_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 089_phrase_waltz_simple_fast_brushes</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/089_phrase_waltz_simple_fast_brushes.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/089_phrase_waltz_simple_fast_brushes.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 069_phrase_afro_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/069_phrase_afro_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/069_phrase_afro_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 077_phrase_hard-rock_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/077_phrase_hard-rock_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/077_phrase_hard-rock_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 102_phrase_country_simple_very-fast_brushes</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/102_phrase_country_simple_very-fast_brushes.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/102_phrase_country_simple_very-fast_brushes.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 052_phrase_afro_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/052_phrase_afro_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/052_phrase_afro_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 046_phrase_rock_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/046_phrase_rock_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/046_phrase_rock_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 111_phrase_oriental_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/111_phrase_oriental_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/111_phrase_oriental_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+
+			<span class="lead">File: 063_phrase_rock_simple_fast_sticks</span>
+			<div class="row">
+				<div class="row">
+					<span class="fig-title">Original NMFD</span>
+					<img src="images/vanilla/063_phrase_rock_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+
+				<div class="row">
+					<span class="fig-title">Modified NMFD</span>
+					<img src="images/modified/063_phrase_rock_simple_fast_sticks.png" class="img-fluid rounded music-snip-element">
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>
