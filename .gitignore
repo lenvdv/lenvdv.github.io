@@ -1,7 +1,5 @@
 # project
-_site/*
-!_site/2019-cyclegan-examples/
-!_site/2020-nmfd-double-hit-examples/
+_site
 .sass-cache
 .vagrant
 
